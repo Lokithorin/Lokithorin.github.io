@@ -1,4 +1,5 @@
 ﻿body {
+    font-family: Arial, sans-serif;
     background-color: beige;
     text-align: center;
 }
@@ -9,6 +10,5 @@ p {
     color: black;
 }
 picture {
-    width: 320px;
-    height: 240px;
+   
 }
