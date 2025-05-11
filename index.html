@@ -7,26 +7,81 @@
     <title>Loki's Game Development Portfolio</title>
 </head>
 <body>
+    <div class="button-container">
+        <div class="left-buttons">
+            <!--<a href="index.html" class="button button1">Home</a>-->
+        </div>
+        <div class="right-buttons">
+            <a href="mailto:Lokirogerswork@gmail.com" class="button button1">E-Mail</a>
+            <a href="https://www.linkedin.com/in/loki-rogers-88a68a327/" class="button button1">LinkedIn</a>
+            <!---<a href="https:// .itch.io" class="button button1">Itch.io</a> --->
+            <!---<a href="https://www.youtube.com/@LiamBurden1493" class="button button1">Youtube</a> --->
+        </div>
+    </div>
+
+
     <h1>Loki's Game Development Portfolio (WIP)</h1>
     <p> Hi, I'm Loki Rogers, a Video Games Development student at Birmingham City University.</p>
 
-    <h2>C++ Platformer Game</h2>
-    <h4> C++/SDL </h4>
-    <p>
-        This is a 2D platformer game, inspired by and styled to be similar to old Super Mario games. I made this using C++ and the development library SDL, with aid of the software "Tiled" to create tile maps for the game levels. <br>
-        This project was done without an engine, so required me to create my own collision and physics system as well as implement camera movement throughout the levels. <br>
-        To create the levels in the game, I made use of "Tiled" to be able to easily create a tile map and export it as a .tmj file which could be read from in code as a series of integers representing a type of tile in it's respective position <br>
-        This allowed me to give specific tile types different properties such as making them breakable or even turning them into entities which act as enemies in the game.
-    </p>
-    <video width="320" height="240" controls muted>
-        <source src="Platformer Video.mp4" type="video/mp4" />
-        The browser you are using does not support the video tag.
-    </video>
-    <br>
-    <picture>
-        <source srcset="PlatformerPic.png" />
-        <img src="PlatformerPic.png" width="320" height="240" />
-    </picture>
+    <div class="skills">
+        <section>
+            <h2>Languages</h2>
+            <div class="skills-grid">
+                <div class="skill">C#</div>
+                <div class="skill">C++</div>
+                <div class="skill">Python</div>
+                <div class="skill">HTML</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">CSS</div>
+            </div>
+        </section>
+        <section>
+            <h2>Software</h2>
+            <div class="skills-grid">
+                <div class="skill">Unity</div>
+                <div class="skill">Unreal</div>
+                <div class="skill">GitHub</div>
+                <div class="skill">Visual Studio</div>
+            </div>
+        </section>
+    </div>
+
+    <div class="filter-container">
+        <select id="languageFilter">
+            <option value="all">All Languages</option>
+            <option value="C#">C#</option>
+            <option value="C++">C++</option>
+            <option value="Python">Python</option>
+        </select>
+
+        <select id="softwareFilter">
+            <option value="all">All Software</option>
+            <option value="Unity">Unity</option>
+            <option value="Unreal">Unreal</option>
+            <option value="Engineless">Engineless</option>
+        </select>
+    </div>
+
+    <div class="game" data-language="C++" data-software="Engineless">
+        <h2>C++ Platformer Game</h2>
+        <h4> C++/SDL </h4>
+        <p>
+            This is a 2D platformer game, inspired by and styled to be similar to old Super Mario games. I made this using C++ and the development library SDL, with aid of the software "Tiled" to create tile maps for the game levels. <br>
+            This project was done without an engine, so required me to create my own collision and physics system as well as implement camera movement throughout the levels. <br>
+            To create the levels in the game, I made use of "Tiled" to be able to easily create a tile map and export it as a .tmj file which could be read from in code as a series of integers representing a type of tile in it's respective position <br>
+            This allowed me to give specific tile types different properties such as making them breakable or even turning them into entities which act as enemies in the game.
+        </p>
+        <video width="320" height="240" controls muted>
+            <source src="Platformer Video.mp4" type="video/mp4" />
+            The browser you are using does not support the video tag.
+        </video>
+        <br>
+        <picture>
+            <source srcset="PlatformerPic.png" />
+            <img src="PlatformerPic.png" width="320" height="240" />
+        </picture>
+
+    </div>
 
     <h2>Castle Smashers</h2>
     <h4> C#/Unity </h4>
@@ -42,10 +97,10 @@
     <h2>Scrap Forge</h2>
     <h4> C#/Unity </h4>
     <p>
-        "Scrap Forge" is an Isometric 3D Action-Adventure game set on a forgotten planet, collapsed, unloved, and filled with junk littered everywhere. Playing as a robot called "Scrappy" you have crash-landed on a lonely world. 
-        Scrappy now must explore and learn about the planet's past to find parts to repair their ship. However, it won't be as easy as other robots will try to stop you each step of the way. 
+        "Scrap Forge" is an Isometric 3D Action-Adventure game set on a forgotten planet, collapsed, unloved, and filled with junk littered everywhere. Playing as a robot called "Scrappy" you have crash-landed on a lonely world.
+        Scrappy now must explore and learn about the planet's past to find parts to repair their ship. However, it won't be as easy as other robots will try to stop you each step of the way.
         This game was made at the end of my first year at BCU and had the whole Development class working alongside students studying both Video Game Design and Art.
-        These 3 disciplines were split into 8 teams, each focusing on a specific area of gameplay. 
+        These 3 disciplines were split into 8 teams, each focusing on a specific area of gameplay.
         I was the lead developer for the "Enemies Team" as well as co-lead developer for 3 other teams, in charge of distributing features to be implemented to members based on their skills whilst still also developing features myself.
     </p>
 
@@ -58,5 +113,91 @@
     <h2>Self Absorbed</h2>
     <h4> C#/Unity</h4>
 
+
+    <script>
+        const languageFilter = document.getElementById('languageFilter');
+        const softwareFilter = document.getElementById('softwareFilter');
+        const games = document.querySelectorAll('.game');
+
+        languageFilter.addEventListener('change', handleLanguageChange);
+        softwareFilter.addEventListener('change', handleSoftwareChange);
+
+        // Track valid combinations of language and software
+        const validCombinations = {
+            'Unity': new Set(),
+            'Unreal': new Set(),
+            'Engineless': new Set(),
+        };
+
+        // Create valid combinations based on the games
+        games.forEach(game => {
+            const language = game.getAttribute('data-language');
+            const software = game.getAttribute('data-software');
+            validCombinations[software].add(language);
+        });
+
+        // Handle the change when a language is selected
+        function handleLanguageChange() {
+            const selectedLanguage = languageFilter.value;
+            const selectedSoftware = softwareFilter.value;
+
+            // If the current combination is invalid, clear the software filter
+            if (isInvalidCombination(selectedLanguage, selectedSoftware)) {
+                softwareFilter.value = 'all';
+            }
+
+            // Filter the games after language change
+            filterGames();
+        }
+
+        // Handle the change when a software is selected
+        function handleSoftwareChange() {
+            const selectedSoftware = softwareFilter.value;
+            const selectedLanguage = languageFilter.value;
+
+            // If the current combination is invalid, clear the language filter
+            if (isInvalidCombination(selectedLanguage, selectedSoftware)) {
+                languageFilter.value = 'all';
+            }
+
+            // Filter the games after software change
+            filterGames();
+        }
+
+        // Check if the current combination of software and language is valid
+        function isInvalidCombination(language, software) {
+            // If either filter is 'all', there's no combination to validate
+            if (language === 'all' || software === 'all') {
+                return false;
+            }
+
+            // Return true if the combination is invalid
+            return !validCombinations[software].has(language);
+        }
+
+        // Function to filter the games based on selected language and software
+        function filterGames() {
+            const selectedLanguage = languageFilter.value;
+            const selectedSoftware = softwareFilter.value;
+
+            games.forEach(game => {
+                const gameLanguage = game.getAttribute('data-language');
+                const gameSoftware = game.getAttribute('data-software');
+
+                const languageMatch = (selectedLanguage === 'all' || gameLanguage === selectedLanguage);
+                const softwareMatch = (selectedSoftware === 'all' || gameSoftware === selectedSoftware);
+
+                // Show or hide the game based on matching criteria
+                if (languageMatch && softwareMatch) {
+                    game.style.display = 'block';
+                } else {
+                    game.style.display = 'none';
+                }
+            });
+        }
+
+        // Initial filtering when the page loads
+        filterGames();
+    </script>
 </body>
 </html>
