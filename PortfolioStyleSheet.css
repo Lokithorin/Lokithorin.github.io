@@ -9,6 +9,14 @@
     color: grey;
 }
 
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: xx-large;
+    color: black;
+    text-decoration: underline;
+}
+
 h2 {
     text-align: center;
     margin: 0 auto;
@@ -41,7 +49,141 @@ picture {
 }
 
 .text-container {
-    flex: 2;
+    flex: 1;
     max-width: 40%;
     padding: 10px;
+}
+
+.game2 {
+    display: flex;
+    flex-direction: column; /* Always use column layout */
+    align-items: center; /* Center contents horizontally */
+    justify-content: center; /* Center contents vertically */
+    width: 100%; /* Ensure it takes full width of the screen */
+}
+
+/* Text container styles for game2 */
+.game2 .text-container {
+    flex: 1;
+    max-width: 60%; /* Limit maximum width to 60% */
+    padding: 10px;
+    text-align: center; /* Optional: Center the text inside */
+}
+
+.skills {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h4 {
+    margin-bottom: -15px;
+    font-size: 1.3rem;
+    text-align: center; /* Center the text inside */
+    color: #362022;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically (in case the height is set) */
+    width: 100%; /* Ensure it spans full width of the parent */
+}
+
+.skill {
+    background-color: blue;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.skill:hover {
+    background-color: darkblue;
+    color: #fff;
+}
+
+
+.button {
+    background-color: blue; 
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button1 {
+    background-color: blue;
+    color: black;
+    border: 2px solid #9E2224;
+    border-radius: 5px;
+}
+
+.button1:hover {
+    background-color: darkblue;
+    color: #E8D4D3;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Makes the divs spaced apart */
+    width: 100%;
+}
+
+.left-buttons {
+    display: flex;
+}
+
+.right-buttons {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+}
+
+.button {
+    margin: 5px;
+}
+
+/* Container for the filter boxes */
+.filter-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Horizontally center the items */
+    align-items: center; /* Vertically center the items */
+    gap: 10px; /* Add some space between the filter boxes */
+    margin-top: 20px; /* Add some space from the top */
+    margin-bottom: 20px; /* Add some space from the top */
+}
+
+    /* Style for each select box (optional, to add space and make them look better) */
+.filter-container select {
+    padding: 8px 16px; /* Add padding inside the select boxes */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border around the select */
+    background-color: blue; /* Light background color */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.filter-container select:focus {
+    border-color: darkblue; /* Change border color on focus */
+    outline: none; /* Remove default outline */
 }

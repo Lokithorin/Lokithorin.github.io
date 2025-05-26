@@ -90,58 +90,82 @@
     <div class="game" data-language="C#" data-software="Unity">
         <h2>Castle Smashers</h2>
         <h4> C#/Unity </h4>
-        <p> "Castle Smashers" is a 3D physics-based puzzle/shooter game made in Unity. It was inspired by the Angry Bird Games.</p> <!-- Add more detail about inspirations etc. later-->
-        <picture>
-            <source srcset="CastleSmasher.gif" />
-            <img src="CastleSmasher.gif" width="480" height="360" />
-        </picture>
-        <div>
-            <a href="CastleSmasher.html"> More Info (WIP) </a>
+        <div class="game2">
+            <div class="text-container">
+                <p> "Castle Smashers" is a 3D physics-based puzzle/shooter game made in Unity. It was inspired by the Angry Bird Games.</p> <!-- Add more detail about inspirations etc. later-->
+            </div>
+            <picture>
+                <source srcset="CastleSmasher.gif" />
+                <img src="CastleSmasher.gif" width="480" height="360" />
+            </picture>
+            <div>
+                <a href="CastleSmasher.html"> More Info (WIP) </a>
+            </div>
         </div>
     </div>
 
     <div class="game" data-language="C#" data-software="Unity">
         <h2>Scrap Forge</h2>
         <h4> C#/Unity </h4>
-        <p>
-            "Scrap Forge" is an Isometric 3D Action-Adventure game set on a forgotten planet, collapsed, unloved, and filled with junk littered everywhere. Playing as a robot called "Scrappy" you have crash-landed on a lonely world.
-            Scrappy now must explore and learn about the planet's past to find parts to repair their ship. However, it won't be as easy as other robots will try to stop you each step of the way.
-            This game was made at the end of my first year at BCU and had the whole Development class working alongside students studying both Video Game Design and Art.
-            These 3 disciplines were split into 8 teams, each focusing on a specific area of gameplay.
-            I was the lead developer for the "Enemies Team" as well as co-lead developer for 3 other teams, in charge of distributing features to be implemented to members based on their skills whilst still also developing features myself.
-        </p>
-
-        <iframe src="https://www.youtube.com/embed/xhDoUTLiBeg?si=zNRBHIx_9W6XCMQB"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
+        <div class="game2">
+            <div class="text-container">
+                <p>
+                    "Scrap Forge" is an Isometric 3D Action-Adventure game set on a forgotten planet, collapsed, unloved, and filled with junk littered everywhere. Playing as a robot called "Scrappy" you have crash-landed on a lonely world.
+                    Scrappy now must explore and learn about the planet's past to find parts to repair their ship. However, it won't be as easy as other robots will try to stop you each step of the way.
+                    This game was made at the end of my first year at BCU and had the whole Development class working alongside students studying both Video Game Design and Art.
+                    These 3 disciplines were split into 8 teams, each focusing on a specific area of gameplay.
+                    I was the lead developer for the "Enemies Team" as well as co-lead developer for 3 other teams, in charge of distributing features to be implemented to members based on their skills whilst still also developing features myself.
+                </p>
+            </div>
+            <iframe src="https://www.youtube.com/embed/xhDoUTLiBeg?si=zNRBHIx_9W6XCMQB"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
     </div>
 
     <div class="game" data-language="C#" data-software="Unity">
         <h2>Self Absorbed</h2>
         <h4> C#/Unity</h4>
-        <p>
-            sss
-        </p>
-        <iframe width="320" height="240" src="https://youtube.com/embed/OCye9l6bFOE" />
+        <div class="game2">
+            <div class="text-container">
+                <p>
+                    sss
+                </p>
+            </div>
+            <iframe width="320" height="240" src="https://youtube.com/embed/OCye9l6bFOE" />
+        </div>
     </div>
 
     <div class="game" data-language="C++" data-software="Unity">
         <h2>Unreal Snake</h2>
         <h4> C++/Unreal Engine 5</h4>
+        <div class="game2">
+            <div class="text-container">
+                <p>
 
-        <iframe width="320" height="240" src="https://youtube.com/embed/5L4-A5bn93A" />
+                </p>
+            </div>
+            <iframe width="320" height="240" src="https://youtube.com/embed/5L4-A5bn93A" />
+        </div>
     </div>
 
     <div class="game" data-language="C++" data-software="Engineless">
         <h2>Snake</h2>
         <h4> C++ Console</h4>
+        <div class="game2">
+            <div class="text-container">
+                <p>
 
-        <iframe width="320" height="240" src="https://youtube.com/embed/iAUbHojSbyY" />
+                </p>
+            </div>
+            <iframe width="320" height="240" src="https://youtube.com/embed/iAUbHojSbyY" />
+        </div>
     </div>
 
     <script>
+        console.log("something");
         const languageFilter = document.getElementById('languageFilter');
         const softwareFilter = document.getElementById('softwareFilter');
         const games = document.querySelectorAll('.game');
@@ -204,6 +228,7 @@
 
         // Function to filter the games based on selected language and software
         function filterGames() {
+            console.log("filtered");
             const selectedLanguage = languageFilter.value;
             const selectedSoftware = softwareFilter.value;
 
@@ -225,6 +250,7 @@
 
         // Initial filtering when the page loads
         filterGames();
+        console.log("not doing it ?");
     </script>
 </body>
 </html>
