@@ -39,3 +39,9 @@ picture {
     align-items: center;
     justify-content: center;
 }
+
+.text-container {
+    flex: 1;
+    max-width: 40%;
+    padding: 10px;
+}
