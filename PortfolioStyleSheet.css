@@ -41,7 +41,7 @@ picture {
 }
 
 .text-container {
-    flex: 1;
+    flex: 2;
     max-width: 40%;
     padding: 10px;
 }
