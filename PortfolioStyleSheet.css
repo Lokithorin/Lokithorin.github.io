@@ -2,13 +2,40 @@
     font-family: Arial, sans-serif;
     background-color: beige;
     text-align: center;
+    padding: 20px;
 }
-h1 {
-   
+
+* {
+    color: grey;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: xx-large;
+    color: black;
+    text-decoration: underline;
 }
 p {
-    color: black;
+    text-align: center;
+    font-size: x-large;
+}
+
+a {
+    font-size: x-large;
+    color: blue;
+    display: block; /* Make the link behave like a block element */
+    text-align: center; /* Center text within the block */
+    margin: 20px auto; /* Center the block horizontally */
+    text-decoration: none; /* Optional: Remove underline */
 }
 picture {
    
+}
+
+.game1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
