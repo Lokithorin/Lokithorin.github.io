@@ -5,7 +5,10 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="PortfolioStyleSheet.css">
     <title>Loki's Game Development Portfolio</title>
+
+
 </head>
+
 <body>
     <div class="button-container">
         <div class="left-buttons">
@@ -23,7 +26,7 @@
     <h1>Loki's Game Development Portfolio (WIP)</h1>
     <p> Hi, I'm Loki Rogers, a Video Games Development student at Birmingham City University.</p>
 
-    
+
     <div class="skills">
         <section>
             <h2>Languages</h2>
@@ -47,6 +50,7 @@
         </section>
     </div>
 
+
     <div class="filter-container">
         <select id="languageFilter">
             <option value="all">All Languages</option>
@@ -63,6 +67,7 @@
         </select>
     </div>
 
+    <div>
     <div class="game" data-language="C++" data-software="Engineless">
         <h2>C++ Platformer Game</h2>
         <h4> C++/SDL </h4>
@@ -79,13 +84,15 @@
                 <source src="Platformer Video.mp4" type="video/mp4" />
                 The browser you are using does not support the video tag.
             </video>
-            <br>
+            
             <picture>
                 <source srcset="PlatformerPic.png" />
                 <img src="PlatformerPic.png" width="320" height="240" />
             </picture>
         </div>
     </div>
+    </div>
+
 
     <div class="game" data-language="C#" data-software="Unity">
         <h2>Castle Smashers</h2>
@@ -96,7 +103,7 @@
             </div>
             <picture>
                 <source srcset="CastleSmasher.gif" />
-                <img src="CastleSmasher.gif" width="480" height="360" />
+                <img src="CastleSmasher.gif" width="480" height="360"/>
             </picture>
             <div>
                 <a href="CastleSmasher.html"> More Info (WIP) </a>
@@ -134,11 +141,11 @@
                     sss
                 </p>
             </div>
-            <iframe width="320" height="240" src="https://youtube.com/embed/OCye9l6bFOE" />
+            <iframe width="320" height="240" src="https://youtube.com/embed/OCye9l6bFOE" ></iframe>
         </div>
     </div>
 
-    <div class="game" data-language="C++" data-software="Unity">
+    <div class="game" data-language="C++" data-software="Unreal">
         <h2>Unreal Snake</h2>
         <h4> C++/Unreal Engine 5</h4>
         <div class="game2">
@@ -147,7 +154,7 @@
 
                 </p>
             </div>
-            <iframe width="320" height="240" src="https://youtube.com/embed/5L4-A5bn93A" />
+            <iframe width="320" height="240" src="https://youtube.com/embed/5L4-A5bn93A" ></iframe>
         </div>
     </div>
 
@@ -160,12 +167,12 @@
 
                 </p>
             </div>
-            <iframe width="320" height="240" src="https://youtube.com/embed/iAUbHojSbyY" />
+            <iframe width="320" height="240" src="https://youtube.com/embed/iAUbHojSbyY" > </iframe>
         </div>
+    </div>
     </div>
 
     <script>
-        console.log("something");
         const languageFilter = document.getElementById('languageFilter');
         const softwareFilter = document.getElementById('softwareFilter');
         const games = document.querySelectorAll('.game');
@@ -228,7 +235,6 @@
 
         // Function to filter the games based on selected language and software
         function filterGames() {
-            console.log("filtered");
             const selectedLanguage = languageFilter.value;
             const selectedSoftware = softwareFilter.value;
 
@@ -250,7 +256,9 @@
 
         // Initial filtering when the page loads
         filterGames();
-        console.log("not doing it ?");
     </script>
+
 </body>
+
+
 </html>
