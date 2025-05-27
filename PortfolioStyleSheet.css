@@ -37,6 +37,23 @@ a {
     margin: 20px auto; /* Center the block horizontally */
     text-decoration: none; /* Optional: Remove underline */
 }
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
 picture {
    
 }
@@ -54,6 +71,37 @@ picture {
     padding: 10px;
 }
 
+.image-container {
+    flex: 1;
+    max-width: 40%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #9E2224;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .game1 {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) {
+    .game1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .game2 {
     display: flex;
     flex-direction: column; /* Always use column layout */
@@ -68,6 +116,49 @@ picture {
     max-width: 60%; /* Limit maximum width to 60% */
     padding: 10px;
     text-align: center; /* Optional: Center the text inside */
+}
+
+.game2 .image-container {
+    width: 60%; /* Explicitly set width to 60% of the game2 container */
+    padding: 10px;
+    border-radius: 15px;
+    background-color: orange;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    flex-shrink: 0; /* Prevent container from shrinking below 60% width */
+    height: auto; /* Allow the height to adjust based on content */
+}
+
+/* Image styles for game2 */
+.game2 .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+.game2 .image-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
+@media (max-width: 80%) {
+    .game2 {
+        display: flex;
+        flex-direction: column; /* Force column direction on small screens */
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Optionally adjust width on smaller screens */
+    .game2 .text-container,
+    .game2 .image-container {
+        width: 100%; /* Set 100% width on smaller screens */
+    }
 }
 
 .skills {
@@ -96,7 +187,7 @@ h4 {
 }
 
 .skill {
-    background-color: blue;
+    background-color: orange;
     color: black;
     padding: 10px 20px;
     border-radius: 5px;
@@ -111,13 +202,13 @@ h4 {
 
 
 .skill:hover {
-    background-color: darkblue;
+    background-color: darkorange;
     color: #fff;
 }
 
 
 .button {
-    background-color: blue; 
+    background-color: orange; 
     border: none;
     color: black;
     padding: 16px 32px;
@@ -132,15 +223,15 @@ h4 {
 }
 
 .button1 {
-    background-color: blue;
+    background-color: orange;
     color: black;
-    border: 2px solid #9E2224;
+    border: 2px solid #D4AF37;
     border-radius: 5px;
 }
 
 .button1:hover {
-    background-color: darkblue;
-    color: #E8D4D3;
+    background-color: darkorange;
+    color: #D4AF37;
     border-radius: 5px;
 }
 
@@ -171,6 +262,7 @@ h4 {
     gap: 10px; /* Add some space between the filter boxes */
     margin-top: 20px; /* Add some space from the top */
     margin-bottom: 20px; /* Add some space from the top */
+    color: black;
 }
 
     /* Style for each select box (optional, to add space and make them look better) */
@@ -178,12 +270,14 @@ h4 {
     padding: 8px 16px; /* Add padding inside the select boxes */
     font-size: 16px; /* Adjust font size */
     border-radius: 5px; /* Rounded corners */
-    border: 1px solid #ccc; /* Border around the select */
-    background-color: blue; /* Light background color */
+    border: 1px solid #D4AF37; /* Border around the select */
+    background-color: orange; /* Light background color */
     cursor: pointer; /* Change cursor to pointer for better UX */
+    color: black;
 }
 
 .filter-container select:focus {
-    border-color: darkblue; /* Change border color on focus */
+    border-color: darkorange; /* Change border color on focus */
     outline: none; /* Remove default outline */
+    color: black;
 }
